@@ -1,0 +1,90 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - banqet booking</title>
+    <meta name="description" content="banqet booking">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+  
+    @Styles.Render("~/Content/Websites")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+
+<body id="page-top">
+    <section id="navbar_section">
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("../Site/index")">Banquet Booking</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto text-uppercase">
+                        <li class="nav-item" id="nav_search"><input type="text" id="search_nav" placeholder="Search"><i class="fa fa-search" style="width: 9%;color: rgb(96,96,96);border: 0px;padding: 2%;/*background-color: white;*/"></i></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Nearby Map</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="@Url.Action("../Site/Histroy")">Histroy</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="@Url.Action("../Site/AboutUs")">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="@Url.Action("../Site/Contact")">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="@Url.Action("../Site/Register")">Register<br></a></li>
+                        <li class="nav-item"><button class="btn btn-primary login" onclick="location.href = '@Url.Content("../Site/Login")';" type="button">Sign in</button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section><!-- Paradise Slider -->
+    @RenderBody()
+
+    <footer>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 footer-navigation">
+                <h3><a class="navbar-brand _footer" href="@Url.Action("../Site/index")">Banquet Booking</a></h3>
+                <p class="links"><a href="@Url.Action("../Site/")">Home</a><strong> · </strong><a href="@Url.Action("../Site/")">Blog</a><strong> · </strong><a href="@Url.Action("../Site/")">Pricing</a><strong> · </strong><a href="@Url.Action("../Site/")">About</a><strong> · </strong><a href="@Url.Action("../Site/")">Faq</a><strong> · </strong><a href="@Url.Action("../Site/")">Contact</a></p>
+                <p class="company-name">Company Name © 2021 </p>
+            </div>
+            <div class="col-sm-6 col-md-4 footer-contacts">
+                <div>
+                    <span class="fa fa-map-marker footer-contacts-icon"> </span>
+                    <p><span class="new-line-span">21 Revolution Street</span> Paris, France</p>
+                </div>
+                <div>
+                    <i class="fa fa-phone footer-contacts-icon"></i>
+                    <p class="footer-center-info email text-left"> +1 555 123456</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope footer-contacts-icon"></i>
+                    <p> <a href="@Url.Action("../Site/")" target="_blank">support@company.com</a></p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-4 footer-about">
+                <h4>About the company</h4>
+                <p> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet. </p>
+                <div class="social-links social-icons"><a href="@Url.Action("../Site/")"><i class="fa fa-facebook"></i></a><a href="@Url.Action("../Site/")"><i class="fa fa-twitter"></i></a><a href="@Url.Action("../Site/")"><i class="fa fa-linkedin"></i></a><a href="@Url.Action("../Site/")"><i class="fa fa-github"></i></a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+@Scripts.Render("~/bundles/Websites")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+
+</html>
